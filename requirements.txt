@@ -1,0 +1,12 @@
+einops
+jupyter
+matplotlib
+numpy
+PyYAML
+scikit-learn
+seaborn
+torch
+torchmetrics
+torchvision
+torch_uncertainty[image] @ git+https://github.com/ENSTA-U2IS-AI/torch-uncertainty@dev
+tqdm

@@ -1,0 +1,153 @@
+{
+  "ece": 0.04410494863986969,
+  "ensemble_ece": 0.02151200734078884,
+  "table_i": [
+    {
+      "method": "Ensemble (predictive entropy)",
+      "auroc": 0.8124590051896453,
+      "id_mean": 0.30209505558013916,
+      "ood_mean": 0.8271148204803467,
+      "id_count": 14532419,
+      "ood_count": 76029
+    },
+    {
+      "method": "NECO-only",
+      "auroc": 0.807121325174718,
+      "id_mean": 0.4020507037639618,
+      "ood_mean": 2.0089783668518066,
+      "id_count": 14532419,
+      "ood_count": 76029
+    },
+    {
+      "method": "Energy-only",
+      "auroc": 0.8170732556010967,
+      "id_mean": -0.06004362925887108,
+      "ood_mean": 1.2302716970443726,
+      "id_count": 14532419,
+      "ood_count": 76029
+    },
+    {
+      "method": "Hybrid (NECO + Energy)",
+      "auroc": 0.8383601509235119,
+      "id_mean": 0.2172129601240158,
+      "ood_mean": 1.6974968910217285,
+      "id_count": 14532419,
+      "ood_count": 76029
+    }
+  ],
+  "separation": [
+    {
+      "method": "Hybrid",
+      "separation": 1.312773544076809
+    },
+    {
+      "method": "Energy-only",
+      "separation": 1.3023547395620076
+    },
+    {
+      "method": "Ensemble",
+      "separation": 1.1737361836338926
+    },
+    {
+      "method": "NECO-only",
+      "separation": 1.0683692801281195
+    }
+  ],
+  "qualitative_sample_index": 0,
+  "qualitative_scene_indices": [
+    13,
+    12,
+    7
+  ],
+  "roc_operating_points": {
+    "ensemble_fpr95": 0.5782320617097539,
+    "ensemble_fpr98": 0.6424611236436274,
+    "hybrid_fpr95": 0.5967421218724839,
+    "hybrid_fpr98": 0.7548779043599004
+  },
+  "condition_wise": {
+    "low_light": {
+      "Hybrid": {
+        "AUROC": 0.6508707614271055,
+        "FPR95": 0.8878601525363262,
+        "FPR98": 0.9238060014977229
+      },
+      "Ensemble": {
+        "AUROC": 0.6034634629763156,
+        "FPR95": 0.8891275523158461,
+        "FPR98": 0.9414667560158
+      }
+    },
+    "high_light": {
+      "Hybrid": {
+        "AUROC": 0.6084806360805083,
+        "FPR95": 0.9369433200805612,
+        "FPR98": 0.9582736543293054
+      },
+      "Ensemble": {
+        "AUROC": 0.5673057092627055,
+        "FPR95": 0.9393816975655758,
+        "FPR98": 0.9812289234682362
+      }
+    },
+    "low_contrast": {
+      "Hybrid": {
+        "AUROC": 0.6320246845535258,
+        "FPR95": 0.9244271954762153,
+        "FPR98": 0.9548466478656882
+      },
+      "Ensemble": {
+        "AUROC": 0.5710129482218196,
+        "FPR95": 0.9041011867282923,
+        "FPR98": 0.9593179745690509
+      }
+    },
+    "high_contrast": {
+      "Hybrid": {
+        "AUROC": 0.644318939222171,
+        "FPR95": 0.8899768863350883,
+        "FPR98": 0.9253835197856397
+      },
+      "Ensemble": {
+        "AUROC": 0.6074112035292806,
+        "FPR95": 0.8933890603030646,
+        "FPR98": 0.9445209136292769
+      }
+    }
+  },
+  "feature_geometry_counts": {
+    "ID": 1200,
+    "OOD-low-NECO": 1200,
+    "OOD-high-NECO": 1200
+  },
+  "feature_geometry_metrics": {
+    "id_mean_distance": 3.172805070877075,
+    "ood_low_neco_mean_distance": 2.375600576400757,
+    "ood_high_neco_mean_distance": 3.3956644535064697,
+    "ood_low_neco_distance_ratio": 0.7487382689236742,
+    "ood_high_neco_distance_ratio": 1.0702404899295588,
+    "ood_low_neco_auroc": 0.42525,
+    "ood_high_neco_auroc": 0.6492236111111112,
+    "id_mean_feature_norm": 6.382794380187988,
+    "ood_low_neco_mean_feature_norm": 6.008853435516357,
+    "ood_high_neco_mean_feature_norm": 5.786323070526123
+  },
+  "saved_files": [
+    "results/paper_figures/Baseline_Calibration.pdf",
+    "results/paper_figures/Baseline_Calibration.png",
+    "results/paper_figures/Deep_Ensembles_ECE.pdf",
+    "results/paper_figures/Deep_Ensembles_ECE.png",
+    "results/paper_figures/OOD_Qualitative_Comparison.pdf",
+    "results/paper_figures/OOD_Qualitative_Comparison.png",
+    "results/paper_figures/H1_MultiScene_Qualitative.pdf",
+    "results/paper_figures/H1_MultiScene_Qualitative.png",
+    "results/paper_figures/OOD_Scores_Distribution.pdf",
+    "results/paper_figures/OOD_Scores_Distribution.png",
+    "results/paper_figures/NC5_Feature_Geometry.pdf",
+    "results/paper_figures/NC5_Feature_Geometry.png",
+    "results/paper_figures/H3_ROC_TailZoom.pdf",
+    "results/paper_figures/H3_ROC_TailZoom.png",
+    "results/paper_figures/H2_ConditionWise_Bars.pdf",
+    "results/paper_figures/H2_ConditionWise_Bars.png"
+  ]
+}

@@ -1,0 +1,60 @@
+seed: 42
+device: auto
+
+data:
+  root: ./datasets/muad
+  target_type: semantic
+  version: small
+  download: true
+  image_size: [256, 512]
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  num_workers: 4
+  pin_memory: false
+  ood_pin_memory: true
+
+model:
+  name: unet
+  num_classes: 19
+  in_channels: 3
+  base_channels: 32
+  dropout: 0.1
+
+training:
+  batch_size: 16
+  learning_rate: 0.02
+  momentum: 0.9
+  weight_decay: 0.0005
+  lr_decay_epochs: 40
+  lr_decay: 0.1
+  epochs: 100
+  ignore_index: 255
+  enet_c: 1.02
+  class_weight_num_classes: 21
+  class_weight_batches: null
+  log_interval: 0
+
+ood:
+  alpha: 0.6
+  num_components: 16
+  temperature: 1.0
+  max_fit_pixels: 250000
+  max_eval_batches: null
+
+uncertainty:
+  ece_num_bins: 15
+  temperature_init: 1.5
+  temperature_max_iter: 50
+  mc_dropout_estimators: [3, 20]
+  ensemble:
+    num_estimators: 3
+    checkpoint_template: checkpoints/unet_ens_{index}.pth
+    train_missing: false
+
+paths:
+  checkpoint: checkpoints/unet.pth
+  detector: checkpoints/hybrid_neco_energy.pt
+  history: results/training_history.json
+  training_curves: results/training_curves_unet.png
+  benchmark: results/benchmark.json
+  paper_figures: results/paper_figures

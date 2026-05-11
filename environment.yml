@@ -1,0 +1,21 @@
+name: neco-energy
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python>=3.10,<3.12
+  - pytorch
+  - torchvision
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - pyyaml
+  - tqdm
+  - jupyter
+  - pip
+  - pip:
+      - einops
+      - torchmetrics
+      - "torch_uncertainty[image] @ git+https://github.com/ENSTA-U2IS-AI/torch-uncertainty@dev"

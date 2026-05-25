@@ -116,34 +116,46 @@ Energy-Aware_NECO/
 
 
 Installation
-
+```
 Create the environment using Conda:
-
+```
+```
 conda env create -f environment.yml
 conda activate neco-energy
-
+```
 or using pip:
-
+```
 pip install -r requirements.txt
+```
 Usage
 Training
+```
 bash scripts/train.sh
+```
 Evaluation
+```
 bash scripts/eval.sh
+```
 Benchmark
+```
 bash scripts/benchmark.sh
+```
 Regenerate Paper Figures
+```
 bash scripts/paper_figures.sh
+```
 Reproducibility
 
 Run quick verification checks before long GPU runs:
-
+```
 python -m compileall src
-
+```
+```
 python -m src.evaluation.train --help
 python -m src.evaluation.eval --help
 python -m src.evaluation.benchmark --help
 python -m src.evaluation.paper_figures --help
+```
 Paper
 
 PDF version:
@@ -171,4 +183,4 @@ Boyuan Zhang
 École Polytechnique, Institut Polytechnique de Paris
 
 LinkedIn:
-https://www.linkedin.com/in/boyuan-zhang-493776216
+boyuan-zhang-493776216

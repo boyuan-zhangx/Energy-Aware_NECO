@@ -112,6 +112,8 @@ Energy-Aware_NECO/
 ├── environment.yml
 ├── requirements.txt
 └── README.md
+```
+
 
 Installation
 

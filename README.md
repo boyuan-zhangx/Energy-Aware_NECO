@@ -6,7 +6,9 @@ Single-pass pixel-wise out-of-distribution (OOD) detection for semantic segmenta
 https://arxiv.org/abs/2605.29773
 
 
-Accepted at the LoWi Workshop @ ICRA 2026.
+Accepted at the LoWi Workshop @ ICRA 2026
+
+Travel grant award from @NOKOV @Tianbot @INNNO 
 
 ---
 

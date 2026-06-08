@@ -1,7 +1,7 @@
 # Energy-Aware NECO
 
 Single-pass pixel-wise out-of-distribution (OOD) detection for semantic segmentation through hybrid feature geometry and logit energy scoring.
-
+https://arxiv.org/abs/2605.29773
 Accepted at the LoWi Workshop @ ICRA 2026.
 
 ---
